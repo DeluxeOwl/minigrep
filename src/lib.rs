@@ -1,3 +1,8 @@
+//! # My Crate
+//!
+//! `my_crate` is a collection of utilities to make performing certain
+//! calculations more convenient.
+
 use std::{env, error::Error, fs};
 
 pub struct Config {
@@ -45,6 +50,20 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     }
 
     Ok(())
+}
+
+/// Adds one to the number given.
+///
+/// # Examples
+///
+/// ```
+/// let arg = 5;
+/// let answer = my_crate::add_one(arg);
+///
+/// assert_eq!(6, answer);
+/// ```
+pub fn add_one(x: i32) -> i32 {
+    x + 1
 }
 // In this case, we indicate that the returned vector should contain
 // string slices that reference slices of the argument contents (rather than the argument query).
